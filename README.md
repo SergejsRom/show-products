@@ -18,10 +18,9 @@ realization.
 
 ###### Write a simple JSON API endpoint which can list all existing products.
 
-##### reate a front-end:
-list all products
+##### Create a front-end:
+###### List all products
 
 ###### Single product page with related products
 
-###### Use cache for single product page information (keep in mind that stock must be
-shown in real-time).
+###### Use cache for single product page information (keep in mind that stock must be shown in real-time).

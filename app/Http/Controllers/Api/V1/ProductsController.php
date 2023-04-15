@@ -11,7 +11,7 @@ class ProductsController extends Controller
 {
     public function index()
     {
-        return ProductResource::collection(Cache::remember('sku', 60, function () {
+        return ProductResource::collection(Cache::remember('sku', 60*60*24, function () {
             return Product::all();
         }));
     }

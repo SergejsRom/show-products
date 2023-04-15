@@ -3,12 +3,8 @@
 namespace App\Http\Controllers;
 
 use Intervention\Image\Facades\Image;
-// use Illuminate\Http\Request;
-// use Illuminate\Support\Facades\Http;
 use App\Models\Product;
-use App\Models\Stock;
-use Illuminate\Support\Facades\DB;
-// use Illuminate\Support\Facades\Storage;
+
 
 
 

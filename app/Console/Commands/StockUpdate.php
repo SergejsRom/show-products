@@ -28,34 +28,32 @@ class StockUpdate extends Command
      */
     public function handle()
     {
-        // if ($this->option('schedule')) {
-            $client = new \GuzzleHttp\Client();
-            $request = $client->get('https://kinfirm.com/app/uploads/laravel-task/stocks.json');
-            $response = $request->getBody();
+        $client = new \GuzzleHttp\Client();
+        $request = $client->get('https://kinfirm.com/app/uploads/laravel-task/stocks.json');
+        $response = $request->getBody();
 
-            $allstocks = json_decode($response, true);
+        $allstocks = json_decode($response, true);
 
-            foreach ($allstocks as $allstock) {
-                if (DB::table('products')->where('sku', $allstock['sku'])->exists()) {
-                    if (DB::table('stocks')
+        foreach ($allstocks as $allstock) {
+            if (DB::table('products')->where('sku', $allstock['sku'])->exists()) {
+                if (DB::table('stocks')
+                    ->where('city', $allstock['city'])
+                    ->where('product_sku', $allstock['sku'])
+                    ->exists()
+                ) {
+                    DB::table('stocks')
                         ->where('city', $allstock['city'])
-                        ->where('product_sku', $allstock['sku'])
-                        ->exists()
-                    ) {
-                        DB::table('stocks')
-                            ->where('city', $allstock['city'])
-                            ->update([
-                                'stock' => $allstock['stock'],
-                            ]);
-                    } elseif (DB::table('products')->where('sku', $allstock['sku'])->exists()) {
-                        Stock::create([
-                            'product_sku' => $allstock['sku'],
+                        ->update([
                             'stock' => $allstock['stock'],
-                            'city' => $allstock['city'],
                         ]);
-                    }
+                } elseif (DB::table('products')->where('sku', $allstock['sku'])->exists()) {
+                    Stock::create([
+                        'product_sku' => $allstock['sku'],
+                        'stock' => $allstock['stock'],
+                        'city' => $allstock['city'],
+                    ]);
                 }
             }
         }
     }
-// }
+}

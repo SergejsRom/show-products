@@ -11,7 +11,7 @@ class StockController extends Controller
 {
     public function index()
     {
-        return StockResource::collection(Cache::remember('sku', 60*60*24, function () {
+        return StockResource::collection(Cache::remember('product_sku', 60*60*24, function () {
             return Stock::all();
         }));
     }

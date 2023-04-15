@@ -34,7 +34,7 @@ class ProductController extends Controller
                 'description' => $allproduct['description'],
                 'size' => $allproduct['size'],
                 'photo' => $filename,
-                'tags' => json_encode($allproduct['tags']),
+                'tags' => $allproduct['tags'],
                 'updated_at' => $allproduct['updated_at']
             ]);
         }

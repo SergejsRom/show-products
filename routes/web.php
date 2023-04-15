@@ -19,7 +19,7 @@ Route::get('/', function () {
 });
 
 Route::get('products', [ProductController::class, 'getProducts'])->name('products');
-Route::get('update', [ProductController::class, 'updateProducts'])->name('update');
+// Route::get('update', [ProductController::class, 'updateProducts'])->name('update');
 
 
 Route::middleware([

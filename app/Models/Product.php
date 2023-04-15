@@ -19,6 +19,10 @@ class Product extends Model
         'city',
         'updated_at'
     ];
+    protected $casts = [
+        'tags' => 'array'
+    ];
+
     public function stocks(): HasMany
     {
         return $this->hasMany(Stock::class, 'product_sku');

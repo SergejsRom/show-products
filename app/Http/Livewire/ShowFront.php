@@ -15,8 +15,11 @@ class ShowFront extends Component
 
     public bool $showLoadMoreButton;
 
+   
+
     public function mount() {
         $this->loadProducts();
+        
     }
 
     public function render()

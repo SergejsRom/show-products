@@ -18,6 +18,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('livewire-version', function () {
+    return view('livewire-version');
+})->name('livewire-version');
+
+Route::get('blade-version', function () {
+    return view('blade-version');
+})->name('blade-version');
+
 Route::get('products', [ProductController::class, 'getProducts'])->name('products');
 // Route::get('update', [ProductController::class, 'updateProducts'])->name('update');
 

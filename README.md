@@ -35,8 +35,10 @@ realization.
 - [x] Api endpoints loading from cache for 24h or till create/update and reset.
 - [x] Made Command, observers, resources, controllers to handle api. 
 - [x] Created front page with all products list
-- [x] List pagination loading on button click
-- [ ] Modal for "show" product.
+- [x] $schedule->command(StockUpdate::class, ['schedule'])->hourly();
+
+- [x] List pagination loading on button click (livewire)
+- [x] Modal for "show" product (livewire)
 
 
 -----------------------

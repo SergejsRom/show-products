@@ -1,5 +1,3 @@
-
-
 ## Requirements
 Use latest version of Laravel PHP framework.
 Use PHP >= 8.0.
@@ -52,4 +50,3 @@ Use cache for single product page information (keep in mind that stock must be s
 To run shedule on local (linux)
 ###### crontab -e 
 ###### * * * * * cd /path-to-your-project && php artisan schedule:run >> /dev/null 2>&1
-

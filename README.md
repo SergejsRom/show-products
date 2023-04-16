@@ -30,7 +30,7 @@ Use cache for single product page information (keep in mind that stock must be s
 
 :heavy_check_mark: Scheduled stock update from json file. command: 'app:stock-update schedule'
 
-        Loads stock only if "SKU" exists in Products table
+Loads stock only if "SKU" exists in Products table
 
 
 :heavy_check_mark: Api endpoint for all Products.

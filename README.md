@@ -32,13 +32,18 @@ realization.
 - [x] scheduled stock update from json file.
 - [x] Api endpoint for all Products.
 - [x] Api endpoint for all Stock.
-- [x] Api endpoints loading from cache for 24h or till create/update and reset.
+- [x] Api endpoints loading from cache for 24h or till create/update and reset on action.
 - [x] Made Command, observers, resources, controllers to handle api. 
-- [x] Created front page with all products list
 - [x] $schedule->command(StockUpdate::class, ['schedule'])->hourly();
 
+- [x] "Welcome" page to choose Livewire or blade version
+
+- [x] Created front page with all products list (livewire)
 - [x] List pagination loading on button click (livewire)
 - [x] Modal for "show" product (livewire)
+
+- [x] List all products (blade)
+- [x] "show" product from cache (blade)
 
 
 -----------------------

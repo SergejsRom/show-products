@@ -14,7 +14,7 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule): void
     {
-        $schedule->command(StockUpdate::class, ['schedule'])->everyMinute();
+        $schedule->command(StockUpdate::class, ['schedule'])->hourly();
     }
 
     /**

@@ -2,10 +2,18 @@
 
 namespace App\Http\Livewire;
 
-use Livewire\Component;
+use LivewireUI\Modal\ModalComponent;
 
-class ShowProduct extends Component
+use App\Models\Product;
+
+class ShowProduct extends ModalComponent
 {
+
+    public int|Product $product;
+ 
+    public function mount(Product $product) {
+        $this->product = $product;
+    }
     public function render()
     {
         return view('livewire.show-product');

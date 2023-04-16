@@ -29,7 +29,9 @@ realization.
 #### Comments:
 ----------------------------
 - [x] Save products to DB from json file.
-- [x] scheduled stock update from json file.
+- [x] Scheduled stock update from json file. 
+        Loads stock only if "SKU" exists in Products table
+
 - [x] Api endpoint for all Products.
 - [x] Api endpoint for all Stock.
 - [x] Api endpoints loading from cache for 24h or till create/update and reset on action.

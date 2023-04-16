@@ -24,6 +24,8 @@ Route::get('livewire-version', function () {
 })->name('livewire-version');
 
 route::get('blade-version', [ListController::class, 'index'])->name('blade-version');
+route::get('blade-version/{product}', [ListController::class, 'show'])->name('blade-version-show');
+
 
 
 Route::get('products', [ProductController::class, 'getProducts'])->name('products');

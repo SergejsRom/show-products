@@ -27,23 +27,36 @@ Use cache for single product page information (keep in mind that stock must be s
 #### Comments:
 ----------------------------
 :heavy_check_mark: Save products to DB from json file.
+
 :heavy_check_mark: Scheduled stock update from json file. 
         Loads stock only if "SKU" exists in Products table
 
+
 :heavy_check_mark: Api endpoint for all Products.
+
 :heavy_check_mark: Api endpoint for all Stock.
+
 :heavy_check_mark: Api endpoints loading from cache for 24h or till create/update and reset on action.
+
 :heavy_check_mark: Made Command, observers, resources, controllers to handle api. 
+
 :heavy_check_mark: $schedule->command(StockUpdate::class, ['schedule'])->hourly();
+
 
 :heavy_check_mark: "Welcome" page to choose Livewire or blade version
 
+
 :heavy_check_mark: Created front page with all products list (livewire)
+
 :heavy_check_mark: List pagination loading on button click (livewire)
+
 :heavy_check_mark: Modal for "show" product (livewire)
 
+
 :heavy_check_mark: List all products (blade)
+
 :heavy_check_mark: "show" product from cache (blade)
+
 
 
 -----------------------

@@ -3,14 +3,8 @@
 namespace App\Http\Controllers;
 
 use Intervention\Image\Facades\Image;
-// use Illuminate\Http\Request;
-// use Illuminate\Support\Facades\Http;
 use App\Models\Product;
-use App\Models\Stock;
 use Illuminate\Support\Facades\DB;
-// use Illuminate\Support\Facades\Storage;
-
-
 
 class ProductController extends Controller
 {
@@ -28,15 +22,27 @@ class ProductController extends Controller
             if (!file_exists($filepath)) {
                 Image::make($allproduct['photo'])->save(public_path('storage/' . $filename));
             }
-
-            Product::updateOrCreate([
-                'sku' => $allproduct['sku'],
-                'description' => $allproduct['description'],
-                'size' => $allproduct['size'],
-                'photo' => $filename,
-                'tags' => json_encode($allproduct['tags']),
-                'updated_at' => $allproduct['updated_at']
-            ]);
+            if (DB::table('products')->where('sku', $allproduct['sku'])->exists()) {
+                DB::table('products')
+                    ->where('sku', $allproduct['sku'])
+                    ->update([
+                        'sku' => $allproduct['sku'],
+                        'description' => $allproduct['description'],
+                        'size' => $allproduct['size'],
+                        'photo' => $filename,
+                        'tags' => $allproduct['tags'],
+                        'updated_at' => $allproduct['updated_at']
+                    ]);
+            } else {
+                Product::create([
+                    'sku' => $allproduct['sku'],
+                    'description' => $allproduct['description'],
+                    'size' => $allproduct['size'],
+                    'photo' => $filename,
+                    'tags' => $allproduct['tags'],
+                    'updated_at' => $allproduct['updated_at']
+                ]);
+            }
         }
         return view('products');
     }

@@ -17,5 +17,6 @@
     <body class="antialiased">
         @livewire('show-front')
         @livewireScripts()
+        @livewire('livewire-ui-modal')
     </body>
 </html>

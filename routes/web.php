@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ListController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,9 +23,8 @@ Route::get('livewire-version', function () {
     return view('livewire-version');
 })->name('livewire-version');
 
-Route::get('blade-version', function () {
-    return view('blade-version');
-})->name('blade-version');
+route::get('blade-version', [ListController::class, 'index'])->name('blade-version');
+
 
 Route::get('products', [ProductController::class, 'getProducts'])->name('products');
 // Route::get('update', [ProductController::class, 'updateProducts'])->name('update');

@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Product;
-use Illuminate\Support\Facades\Cache;
 
 class ListController extends Controller
 {
@@ -13,9 +12,10 @@ class ListController extends Controller
      */
     public function index()
     {
-        return Product::all(Cache::remember('sku', 60*60*24, function () {
+        $products = cache()->remember('sku', 60*60*24, function () {
             return Product::all();
-        }));
+        });
+        return view('blade-version', compact('products'));
     }
 
     /**

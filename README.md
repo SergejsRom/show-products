@@ -39,7 +39,7 @@ Loads stock only if "SKU" exists in Products table
 
 :heavy_check_mark: Api endpoints loading from cache for 24h or till create/update and reset on action.
 
-:heavy_check_mark: Made Command, observers, resources, controllers to handle api. 
+:heavy_check_mark: Made Commands, observers, resources, controllers to handle api. 
 
 :heavy_check_mark: $schedule->command(StockUpdate::class, ['schedule'])->hourly();
 

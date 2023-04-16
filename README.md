@@ -12,18 +12,18 @@ realization.
 
 #### Create mini page with the following functionality:
 
-###### Write a command which imports products from given JSON file (products.json)
+Write a command which imports products from given JSON file (products.json)
 
-###### Write a scheduled command which imports products stock from given JSON file (stocks.json)
+Write a scheduled command which imports products stock from given JSON file (stocks.json)
 
-##### Write a simple JSON API endpoint which can list all existing products.
+Write a simple JSON API endpoint which can list all existing products.
 
 #### Create a front-end:
-###### List all products
+List all products
 
-###### Single product page with related products
+Single product page with related products
 
-###### Use cache for single product page information (keep in mind that stock must be shown in real-time).
+Use cache for single product page information (keep in mind that stock must be shown in real-time).
 
 ----------------------------
 #### Comments:

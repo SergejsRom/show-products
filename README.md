@@ -62,7 +62,5 @@ Loads stock only if "SKU" exists in Products table
 
 -----------------------
 To run shedule on local (linux)
-        
-        crontab -e 
-        
-        * * * * * cd /path-to-your-project && php artisan schedule:run >> /dev/null 2>&1
+###### crontab -e 
+###### * * * * * cd /path-to-your-project && php artisan schedule:run >> /dev/null 2>&1

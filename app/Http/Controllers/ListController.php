@@ -25,10 +25,14 @@ class ListController extends Controller
      */
     public function show(Product $product)
     {
-        $product = Cache::get('sku')
-        ->where('sku', $product->sku)
-        ->first();
-
+        if (Cache::has('sku')) {
+            $product = Cache::get('sku')
+            ->where('sku', $product->sku)
+            ->first();
+         } else {
+             $product = Product::where('sku', $product->sku)
+             ->first();
+         }
         return view('blade-version-show', compact('product'));
     }
 }

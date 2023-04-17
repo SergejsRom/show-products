@@ -27,8 +27,10 @@ Use cache for single product page information (keep in mind that stock must be s
 #### Comments:
 ----------------------------
 :heavy_check_mark: Save products to DB from json file. command: 'app:get-products'
+
 :heavy_check_mark: Scheduled stock update from json file. command: 'app:stock-update schedule'
-        Loads stock only if "SKU" exists in Products table
+
+Loads stock only if "SKU" exists in Products table
 
 
 :heavy_check_mark: Api endpoint for all Products.
@@ -37,7 +39,7 @@ Use cache for single product page information (keep in mind that stock must be s
 
 :heavy_check_mark: Api endpoints loading from cache for 24h or till create/update and reset on action.
 
-:heavy_check_mark: Made Command, observers, resources, controllers to handle api. 
+:heavy_check_mark: Made Commands, observers, resources, controllers to handle api. 
 
 :heavy_check_mark: $schedule->command(StockUpdate::class, ['schedule'])->hourly();
 
@@ -60,5 +62,7 @@ Use cache for single product page information (keep in mind that stock must be s
 
 -----------------------
 To run shedule on local (linux)
-###### crontab -e 
-###### * * * * * cd /path-to-your-project && php artisan schedule:run >> /dev/null 2>&1
+        
+        crontab -e 
+        
+        * * * * * cd /path-to-your-project && php artisan schedule:run >> /dev/null 2>&1

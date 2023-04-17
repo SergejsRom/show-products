@@ -7,6 +7,10 @@ use App\Models\Product;
 use App\Http\Resources\ProductResource;
 use Illuminate\Support\Facades\Cache;
 
+/**
+ * @group Products
+ */
+
 class ProductsController extends Controller
 {
     public function index()

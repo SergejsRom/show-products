@@ -3,10 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Product;
-use Illuminate\Support\Arr;
-use Termwind\Components\Dd;
 
-class ProductController extends Controller
+class CountController extends Controller
 {
     public function getProducts()
     {

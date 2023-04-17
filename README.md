@@ -74,7 +74,7 @@ Loads stock only if "SKU" exists in Products table
 
     After login/register through API (token issued for specific device) (with 'supports_credentials' => true) Register and Login API routes
 
-:heavy_check_mark: API docs
+:heavy_check_mark: API Scribe docs link: /docs
 
 
 

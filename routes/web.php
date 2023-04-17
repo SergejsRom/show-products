@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ProductController;
+use App\Http\Controllers\CountController;
 use App\Http\Controllers\ListController;
 
 /*
@@ -28,9 +28,7 @@ route::get('blade-version/{product}', [ListController::class, 'show'])->name('bl
 
 
 
-Route::get('products', [ProductController::class, 'getProducts'])->name('products');
-// Route::get('update', [ProductController::class, 'updateProducts'])->name('update');
-
+Route::get('products', [CountController::class, 'getProducts'])->name('products');
 
 Route::middleware([
     'auth:sanctum',

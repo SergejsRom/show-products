@@ -2,9 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use Intervention\Image\Facades\Image;
 use App\Models\Product;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Arr;
 
 class ProductController extends Controller
@@ -19,7 +17,8 @@ class ProductController extends Controller
         ->get();
         
         $data = json_decode($data, true);
-        // $data = Arr::get($data, 'tags.value.title');
+        //$data = Arr::get($data, array('key', 'tags'));
+        //dump($data[0]['tags'][0]['title']);
         //dd($data);
         return view('products', compact('data',));
     }

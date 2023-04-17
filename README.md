@@ -23,6 +23,8 @@ Single product page with related products
 
 Use cache for single product page information (keep in mind that stock must be shown in real-time).
 
+Show most popular tags list by products count.
+
 ----------------------------
 #### Comments:
 ----------------------------
@@ -57,6 +59,9 @@ Loads stock only if "SKU" exists in Products table
 :heavy_check_mark: List all products (blade)
 
 :heavy_check_mark: "show" product from cache (blade)
+
+:heavy_check_mark: Most popular tags list
+
 
 
 

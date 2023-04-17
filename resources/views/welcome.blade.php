@@ -31,6 +31,11 @@
                 <div class="-mt-1 font-sans text-2xl font-semibold">Livewire version</div>
             </div>
         </a>
+        <a href="{{ route('products') }}" class="w-full sm:w-auto bg-gray-800 hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-300 text-white rounded-lg inline-flex items-center justify-center p-8 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700">
+            <div class="text-left">
+                <div class="-mt-1 font-sans text-2xl font-semibold">Most popular tags</div>
+            </div>
+        </a>
     </div>
 </div>
         @livewireScripts()

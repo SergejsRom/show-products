@@ -13,7 +13,7 @@ class ProductController extends Controller
         $data = Product::select('tags')
         ->selectRaw('count(tags) as qty')
         ->groupBy('tags')
-        ->orderBy('qty', 'ASC')
+        ->orderBy('qty', 'DESC')
         ->get();
         
         $data = json_decode($data, true);

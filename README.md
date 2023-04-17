@@ -25,6 +25,9 @@ Use cache for single product page information (keep in mind that stock must be s
 
 Show most popular tags list by products count.
 
+#### API auth
+Add authentification for JSON API.
+
 ----------------------------
 #### Comments:
 ----------------------------
@@ -61,6 +64,13 @@ Loads stock only if "SKU" exists in Products table
 :heavy_check_mark: "show" product from cache (blade)
 
 :heavy_check_mark: Most popular tags list
+
+
+:heavy_check_mark: Added auth for API routes.
+    Token could be issued:
+    After login/register to the profile in Jetstream
+    OR
+    After login/register through API (token issued for specific device) (with 'supports_credentials' => true) Register and Login API routes
 
 
 

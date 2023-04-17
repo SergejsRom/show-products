@@ -7,6 +7,10 @@ use App\Models\Stock;
 use App\Http\Resources\StockResource;
 use Illuminate\Support\Facades\Cache;
 
+/**
+ * @group Products
+ */
+
 class StockController extends Controller
 {
     public function index()

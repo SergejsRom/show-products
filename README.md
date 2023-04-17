@@ -69,9 +69,12 @@ Loads stock only if "SKU" exists in Products table
 :heavy_check_mark: Added auth for API routes.
     Token could be issued:
     After login/register to the profile in Jetstream
+    
     OR
+
     After login/register through API (token issued for specific device) (with 'supports_credentials' => true) Register and Login API routes
 
+:heavy_check_mark: API Scribe docs link: /docs
 
 
 

@@ -12,7 +12,7 @@ class StockObserver
      */
     public function created(Stock $stock): void
     {
-        Cache::forget('product_sku');
+        Cache::flush();
     }
 
     /**
@@ -20,7 +20,7 @@ class StockObserver
      */
     public function updated(Stock $stock): void
     {
-        Cache::forget('product_sku');
+        Cache::flush();
     }
 
     /**
@@ -28,7 +28,7 @@ class StockObserver
      */
     public function deleted(Stock $stock): void
     {
-        //
+        Cache::flush();
     }
 
     /**

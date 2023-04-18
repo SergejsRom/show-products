@@ -12,7 +12,7 @@ class ProductObserver
      */
     public function created(Product $product): void
     {
-        Cache::forget('sku');
+        Cache::flush();
     }
 
     /**
@@ -20,7 +20,7 @@ class ProductObserver
      */
     public function updated(Product $product): void
     {
-        Cache::forget('sku');
+        Cache::flush();
     }
 
     /**
@@ -28,7 +28,7 @@ class ProductObserver
      */
     public function deleted(Product $product): void
     {
-        //
+        Cache::flush();
     }
 
     /**
